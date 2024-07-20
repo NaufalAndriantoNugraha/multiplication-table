@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fronts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./assets/fronts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono Italic';
+  src: url('./assets/fronts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf');
+  font-style: italic;
+}
+
+/* || CSS Reset and custom properties */
+:root {
+  --clr-primary: #7e6deb;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* || Navbar */
+nav {
+  background-color: var(--clr-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  font-family: 'Inter';
+  padding: 1rem;
+  cursor: pointer;
+  justify-content: space-between;
+  padding-inline: 2.5rem;
+}
+
+nav h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+
+nav a {
+  color: inherit;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  text-decoration: underline;
+}
+
+/* || Main */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.display {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.message {
+  font-family: 'Inter';
+  max-width: fit-content;
+  display: grid;
+  gap: 1rem;
+}
+
+.message p:first-child {
+  font-family: 'JetBrains Mono';
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.message p:first-child span {
+  color: var(--clr-primary);
+}
+
+.message p:last-child {
+  font-size: 1.25rem;
+}
+
+.display img {
+  margin-top: 5%;
+}
+
+main button {
+  cursor: pointer;
+  align-self: center;
+  border: none;
+  background-color: var(--clr-primary);
+  color: white;
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-radius: 10px;
+}
+
+/* || Media queries */
+@media screen and (max-width: 370px) {
+  /* Navbar */
+  nav {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* || Main */
+  main {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .display {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .display img {
+    margin-top: 1.5rem;
+  }
+}
